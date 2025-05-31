@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background: linear-gradient(45deg, #000428, #004e92);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overscroll-behavior-y: contain;
+}
+.game-container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 255, 0.3);
+}
+#hangman-canvas {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+#phrase-display {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #00ffff;
+    word-break: break-all;
+}
+#letter-buttons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 100%;
+}
+#letter-buttons button {
+    background: #004e92;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    min-height: 40px;
+    touch-action: manipulation;
+}
+#letter-buttons button:hover:not(:disabled) {
+    background: #00ffff;
+    color: black;
+}
+#letter-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+@media (max-width: 400px) {
+    #letter-buttons {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    #letter-buttons button {
+        font-size: 0.8rem;
+        min-height: 35px;
+        padding: 5px;
+    }
+    .game-container {
+        padding: 10px;
+    }
+    #phrase-display {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+}
+#game-message {
+    margin-top: 10px;
+    color: #00ffff;
+    font-weight: bold;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+    appearance: none;
+}

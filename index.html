@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Space Hangman Mobile</title>
+    <link
+      href="style.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="game-container">
+        <div id="game-info">
+            <div>⏰ Time: <span id="timer">5:00</span></div>
+            <div>🚀 Score: <span id="score">0.00</span></div>
+        </div>
+        
+        <canvas id="hangman-canvas" width="300" height="200"></canvas>
+        
+        <div id="phrase-display">_ _ _ _ _</div>
+        
+        <div id="letter-buttons"></div>
+        
+        <div id="game-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
